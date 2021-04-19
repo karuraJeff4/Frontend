@@ -3,6 +3,7 @@ import { product } from './product.model';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,7 @@ export class ProductService {
       verticalPosition: "top"
     })
   }
-  create(product: product) {
-    return this.http.post(this.baseUrl, product)
+  create(product: product): Observable<product>{
+    return this.http.post<product>(this.baseUrl, product)
   }
 }
