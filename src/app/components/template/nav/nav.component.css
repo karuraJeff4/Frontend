@@ -1,0 +1,14 @@
+.Sidenav {
+    background-color: #3f51b5;
+    width: 200px;
+}
+.Sidenav a {
+  color: #fff;
+}
+.Sidenav i {
+  padding-right:10px ;
+}
+.content {
+  padding: 16px;
+  background-color: #fff;
+}
